@@ -1,6 +1,6 @@
 ---
 title: Human Bowl
-description: A joke landing page for a plate/bowl hybrid, made by an LLM in a single prompt.
+description: A joke landing page for a plate/bowl hybrid, made with an LLM in a single sitting.
 date: 2026-01-16
 link: https://humanbowl.com/
 repo: https://github.com/wLotherington/human_bowl
@@ -15,7 +15,10 @@ product specs, color options, FAQs, and a waitlist signup.
 
 ## Why I kept it
 
-The site is a joke, but the way it was made isn't. This was the first time an
-LLM gave me a one-shot result that was better than anything I could have put
-together over a weekend. Even the images are LLM generated. I'm keeping it
-around as a reminder of the moment the tools got this good.
+The site is a joke, but the way it was made isn't. The first prompt got it
+about 80% of the way there (which still blows my mind), and the rest came
+together easily in the same session. Even the images are LLM generated. What
+struck me wasn't one magic prompt, it was ending up with something genuinely
+compelling in a single sitting, better than anything I could have put
+together over a weekend. I'm keeping it around as a reminder of the moment
+the tools got this good.
