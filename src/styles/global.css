@@ -283,6 +283,22 @@ ul, ol {
   text-decoration: underline;
 }
 
+.author-note {
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-faint);
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+/* When the tag list is present it already draws the divider */
+.tag-list + .author-note {
+  margin-top: 1.25rem;
+  padding-top: 0;
+  border-top: none;
+}
+
 .wip-badge {
   margin-left: 0.375rem;
   font-family: var(--font-sans);
