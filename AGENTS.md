@@ -1,16 +1,19 @@
 ## Writing
 
-Blog posts (`src/blog/`) are 100% written by Will — typos and all. Never
+Blog posts (`src/blog/`) are 100% written by Will, typos and all. Never
 draft, rewrite, or "clean up" blog post prose, even when asked to fix
 unrelated things in the same file; editing frontmatter, fixing broken
 links/markup, or moving files is fine.
 
-For all other prose on the site — project blurbs (`src/projects/`), page
-copy, descriptions, alt text, meta descriptions — always write in Will's
+For all other prose on the site (project blurbs in `src/projects/`, page
+copy, descriptions, alt text, meta descriptions), always write in Will's
 style. Before writing any copy, read a few posts in `src/blog/` and use them
 as the voice reference: first person, plainspoken and direct, concrete
 examples over abstractions, honest about trade-offs, with occasional dry
 humor and parentheticals.
+
+Never use em dashes in any copy you write for this site. Use a period,
+comma, colon, or parentheses instead.
 
 ## Development
 
