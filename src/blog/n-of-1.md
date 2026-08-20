@@ -5,6 +5,8 @@ description: "Now that AI makes software basically free to create, I'm building 
 tags: ["ai", "software", "building"]
 ---
 
+![Macro photo of a single snowflake, every branch of it one of a kind](/blog/n-of-1-1.jpeg) Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/focused-photo-of-a-snow-flake-5AiWn2U10cw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 AI got good… like mind-blowingly good. Sure it will probably never replace the frontier/fringe/wizard workers, but it is more than capable of handling an uncomfortably large chunk of the work SWEs used to be (and still are) paid big bucks to do. So, what should we do now that web apps are being commoditized? We go smaller and actually build out that long tail.
 
 I used to fancy myself as an athlete in high school and college, but it’s been about a decade now of sedentary life. I stumbled on [Hyrox](https://hyrox.com/the-fitness-race/) when looking for something to motivate me to get back into better shape and health. Now I don’t know if I will actually do one of these races, but I do know that I spent about half an hour with Claude Code and now have a little SQLite-backed web app hosted on my private server that I can access on my phone or laptop to track my training program over the next 6 months in case I do decide to go through with it. If this happened a couple years ago I would…
