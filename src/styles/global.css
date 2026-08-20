@@ -113,6 +113,18 @@ video {
   border-radius: 8px;
 }
 
+/* Markdown posts put photo credits/captions in the same paragraph as the
+   image, so the paragraph's trailing text is the caption. */
+p:has(> img:first-child) {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+p:has(> img:first-child) img {
+  display: block;
+  margin-bottom: 0.625rem;
+}
+
 .video-embed {
   display: block;
   width: 100%;
