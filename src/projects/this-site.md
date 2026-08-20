@@ -1,6 +1,6 @@
 ---
 title: This site
-description: A minimal personal blog and portfolio built with Astro.
+description: My personal blog and portfolio, built with Astro.
 date: 2026-08-03
 repo: https://github.com/wLotherington/me
 ---
@@ -17,7 +17,7 @@ Netlify from GitHub; every push to `main` ships automatically.
 
 ## Design
 
-Intentionally minimal: a single column, generous whitespace, and almost no
-chrome. Type is set in Fraunces and Inter (self-hosted, so the site stays
-fully static), on a warm paper-and-ink palette with a matching dark mode.
-The entire stylesheet is a few hundred lines.
+I kept it simple: a single column, lots of whitespace, and almost no chrome.
+The type is Fraunces and Inter (self-hosted, so everything stays static), on
+a warm paper-and-ink palette with a matching dark mode. The whole stylesheet
+is a few hundred lines.
