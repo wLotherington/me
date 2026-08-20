@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
+import { satteri } from '@astrojs/markdown-satteri';
 
 import sitemap from "@astrojs/sitemap";
 
@@ -15,6 +16,28 @@ const latinUnicodeRange = /** @type {[string, ...string[]]} */ ([
 // previously loaded via @fontsource CSS imports, so the rendered output is
 // identical. The remote `fontsource` provider is avoided because it only
 // serves wght-only files and would drop the optical sizing (opsz) axis.
+
+// Markdown images point at files in `public/`, which Astro passes through as
+// bare <img> tags with no loading hints. Lazy-load everything after the first
+// image on each page; the first may be above the fold, and lazy-loading it
+// would hurt LCP. Written as a factory so `firstImageSeen` resets per document.
+/** @returns {import('satteri').HastPluginDefinition} */
+const lazyImages = () => {
+  let firstImageSeen = false;
+  return {
+    name: "lazy-images",
+    element: {
+      filter: ["img"],
+      visit(node, ctx) {
+        ctx.setProperty(node, "decoding", "async");
+        if (firstImageSeen) {
+          ctx.setProperty(node, "loading", "lazy");
+        }
+        firstImageSeen = true;
+      },
+    },
+  };
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -67,6 +90,7 @@ export default defineConfig({
     },
   ],
   markdown: {
+    processor: satteri({ hastPlugins: [lazyImages] }),
     shikiConfig: {
       themes: {
         light: 'github-light',
