@@ -16,7 +16,7 @@ in-transit message processing for web applications. It lets developers deploy
 scalable realtime infrastructure to AWS with a CLI tool, and process messages
 *as they move through the system* using modular serverless functions.
 
-<video autoplay loop muted playsinline src="/projects/ekko-infrastructure.mp4" aria-label="Animated diagram of Ekko's realtime infrastructure"></video>
+<video autoplay loop muted playsinline src="/projects/ekko-infrastructure.mp4" style="background: #fff; padding: 0.5rem;" aria-label="Animated diagram of Ekko's realtime infrastructure"></video>
 
 ## What it does
 
