@@ -8,8 +8,8 @@
   --color-card-bg: #f1ecdc;
   --color-accent: #9c4221;
   --color-link: var(--color-accent);
-  --font-serif: "Fraunces Variable", Georgia, "Iowan Old Style", "Times New Roman", serif;
-  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* --font-serif (Fraunces) and --font-sans (Inter) are injected by Astro's
+     Fonts API (see astro.config.mjs) with metric-matched fallbacks. */
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
