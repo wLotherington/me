@@ -17,7 +17,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.5rem 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
   a {
@@ -25,19 +25,27 @@
     text-decoration: none;
   }
 
-  a:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
+  .site-name {
+    font-family: var(--font-serif);
+    font-size: 1.1875rem;
+    font-weight: 640;
+    letter-spacing: -0.005em;
   }
 
-  .site-name {
-    font-weight: 600;
+  .site-name:hover {
+    color: var(--color-accent);
   }
 
   nav {
     display: flex;
-    gap: 1.25rem;
-    font-size: 0.9375rem;
+    gap: 1.375rem;
+    font-size: 0.875rem;
     color: var(--color-muted);
+  }
+
+  nav a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 </style>

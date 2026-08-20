@@ -34,29 +34,36 @@ const projects = (await getCollection("projects"))
   .project-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 2rem 0 0;
   }
 
   .project-list li {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.625rem;
   }
 
-  .project-list a {
-    font-weight: 600;
+  .project-list > li > a {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 580;
+    letter-spacing: -0.005em;
+    color: var(--color-text);
     text-decoration: none;
   }
 
-  .project-list a:hover {
+  .project-list > li > a:hover {
+    color: var(--color-accent);
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
   }
 
   .project-list p {
-    margin: 0.125rem 0 0;
+    margin: 0.1875rem 0 0;
   }
 
   .year {
-    margin-left: 0.5rem;
-    font-size: 0.875rem;
+    margin-left: 0.625rem;
+    font-size: 0.8125rem;
     font-variant-numeric: tabular-nums;
   }
 

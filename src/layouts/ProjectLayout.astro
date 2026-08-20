@@ -5,26 +5,20 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
   <article>
-    <h1>{frontmatter.title} {frontmatter.wip && <span class="wip-badge">WIP</span>}</h1>
-    <p class="article-meta">
-      {frontmatter.date.getUTCFullYear()}
-      {' · '}
-      {frontmatter.description}
+    <header class="article-header">
+      <p class="article-eyebrow">
+        {frontmatter.date.getUTCFullYear()}{frontmatter.wip && <span class="wip-badge">WIP</span>}
+      </p>
+      <h1>{frontmatter.title}</h1>
+      <p class="article-subtitle">{frontmatter.description}</p>
       {(frontmatter.repo || frontmatter.link) && (
-        <span class="article-links">
+        <p class="article-links">
           {frontmatter.link && <a href={frontmatter.link}>{frontmatter.linkLabel}</a>}
           {frontmatter.link && frontmatter.repo && ' · '}
           {frontmatter.repo && <a href={frontmatter.repo}>Source</a>}
-        </span>
+        </p>
       )}
-    </p>
-
-    <style>
-      .article-links {
-        display: block;
-        margin-top: 0.25rem;
-      }
-    </style>
+    </header>
 
     <slot />
   </article>

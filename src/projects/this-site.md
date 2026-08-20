@@ -17,5 +17,7 @@ Netlify from GitHub; every push to `main` ships automatically.
 
 ## Design
 
-Intentionally minimal: system fonts, a single column, generous whitespace, and
-almost no chrome. The entire stylesheet is a few hundred lines.
+Intentionally minimal: a single column, generous whitespace, and almost no
+chrome. Type is set in Fraunces and Inter (self-hosted, so the site stays
+fully static), on a warm paper-and-ink palette with a matching dark mode.
+The entire stylesheet is a few hundred lines.
