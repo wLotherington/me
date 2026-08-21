@@ -1,7 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <style>
-    text { font: 600 72px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1a1a1a; }
-    @media (prefers-color-scheme: dark) { text { fill: #d6d6d6; } }
+    rect { fill: #f8f5ec; }
+    text { font: 600 70px Fraunces, Georgia, "Times New Roman", serif; fill: #9c4221; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #181511; }
+      text { fill: #df8f60; }
+    }
   </style>
+  <rect width="100" height="100" rx="20"/>
   <text x="50" y="74" text-anchor="middle">W</text>
 </svg>
