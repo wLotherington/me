@@ -15,13 +15,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text: #e4ddcd;
-    --color-muted: #a19882;
-    --color-faint: #332e24;
-    --color-bg: #181511;
-    --color-code-bg: #231f17;
-    --color-card-bg: #201c15;
-    --color-accent: #df8f60;
+    --color-text: #eae3d3;
+    --color-muted: #aaa089;
+    --color-faint: #3e372b;
+    --color-bg: #262119;
+    --color-code-bg: #2f2920;
+    --color-card-bg: #2c261d;
+    --color-accent: #e39a6b;
   }
 }
 
