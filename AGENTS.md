@@ -1,9 +1,15 @@
 ## Writing
 
-Blog posts (`src/blog/`) are 100% written by Will, typos and all. Never
-draft, rewrite, or "clean up" blog post prose, even when asked to fix
-unrelated things in the same file; editing frontmatter, fixing broken
-links/markup, or moving files is fine.
+Blog posts (`src/blog/`) are 100% written by Will. Never draft, rewrite,
+or "clean up" blog post prose, even when asked to fix unrelated things in
+the same file; editing frontmatter, fixing broken links/markup, or moving
+files is fine.
+
+The one exception is typos. Will has you do a typo check before shipping a
+post: fix clear misspellings and slips like "then/than", "its/it's",
+"whats/what's", or a stray plural. Leave everything else exactly as written,
+including his dashes, ellipses, casual casing, sentence structure, and
+word choice. When in doubt, it's a style choice, not a typo.
 
 For all other prose on the site (project blurbs in `src/projects/`, page
 copy, descriptions, alt text, meta descriptions), always write in Will's
