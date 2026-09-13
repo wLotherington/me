@@ -242,6 +242,29 @@ ul, ol {
   text-underline-offset: 3px;
 }
 
+/* Blog post body: tuned for long-form reading. Scoped to .post so the
+   homepage and project pages keep the sans body and wider measure. */
+.post {
+  max-width: 38rem;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.post p,
+.post ul,
+.post ol {
+  margin: 0 0 1.5em;
+}
+
+/* Keep the UI-ish bits in the sans face */
+.post .article-eyebrow,
+.post .tag-list,
+.post .author-note,
+.post p:has(> img:first-child) {
+  font-family: var(--font-sans);
+}
+
 /* Article pages */
 .article-header {
   margin: 0 0 2.5rem;
