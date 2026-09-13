@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description}>
-  <article>
+  <article class="post">
     <header class="article-header">
       <p class="article-eyebrow">
         <time datetime={frontmatter.pubDate.toISOString()}>
