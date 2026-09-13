@@ -303,7 +303,7 @@ ul, ol {
   flex-wrap: wrap;
   gap: 0.375rem 1rem;
   padding: 1.5rem 0 0;
-  margin: 2.5rem 0 0;
+  margin: 2rem 0 0;
   border-top: 1px solid var(--color-faint);
   font-size: 0.875rem;
 }
@@ -325,6 +325,12 @@ ul, ol {
   font-size: 0.8125rem;
   font-style: italic;
   color: var(--color-muted);
+}
+
+/* Post pages end in the subscribe box, so pull the site footer's rule up to
+   the same 2rem rhythm as the other dividers above it. */
+main:has(.post) + footer {
+  margin-top: 2rem;
 }
 
 /* When the tag list is present it already draws the divider */

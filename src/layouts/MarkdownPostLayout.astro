@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Subscribe from '../components/Subscribe.astro';
 const { frontmatter } = Astro.props;
 ---
 
@@ -28,5 +29,7 @@ const { frontmatter } = Astro.props;
     )}
 
     <p class="author-note">Every post here is 100% written by me, without AI.</p>
+
+    <Subscribe />
   </article>
 </BaseLayout>

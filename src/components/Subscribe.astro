@@ -1,0 +1,136 @@
+---
+// Buttondown handles the list, double opt-in, and unsubscribes. The form is a
+// plain POST so it works without JS; the script below intercepts it so the
+// page can swap in a thanks message instead of bouncing to Buttondown.
+---
+
+<section class="subscribe">
+  <p class="subscribe-blurb">
+    Want the next one in your inbox?
+    Or grab the <a href="/rss.xml">RSS feed</a> if that's more your style.
+  </p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/wlotherington"
+    method="post"
+    class="subscribe-form"
+  >
+    <label for="bd-email" class="visually-hidden">Email</label>
+    <input
+      type="email"
+      name="email"
+      id="bd-email"
+      placeholder="you@example.com"
+      autocomplete="email"
+      required
+    />
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="subscribe-thanks" hidden>
+    Thanks! Check your inbox for a confirmation email.
+  </p>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('.subscribe-form');
+  const thanks = document.querySelector<HTMLElement>('.subscribe-thanks');
+
+  form?.addEventListener('submit', async (event) => {
+    if (!form.reportValidity()) return;
+    event.preventDefault();
+
+    const button = form.querySelector<HTMLButtonElement>('button');
+    if (button) button.disabled = true;
+
+    try {
+      // Buttondown's embed endpoint doesn't send CORS headers, so the response
+      // is opaque. The subscription still goes through; we just can't read it.
+      await fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(form) as any),
+      });
+      form.hidden = true;
+      if (thanks) thanks.hidden = false;
+    } catch {
+      // Network failure: fall back to the normal form POST.
+      form.submit();
+    }
+  });
+</script>
+
+<style>
+  .subscribe {
+    margin: 2rem 0 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-faint);
+    font-family: var(--font-sans);
+  }
+
+  .subscribe-blurb {
+    margin: 0 0 0.875rem;
+    font-size: 0.875rem;
+    color: var(--color-muted);
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  input,
+  button {
+    font: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.2;
+    padding: 0.55rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-faint);
+  }
+
+  input {
+    flex: 1 1 14rem;
+    min-width: 0;
+    color: var(--color-text);
+    background-color: var(--color-card-bg);
+  }
+
+  input::placeholder {
+    color: var(--color-muted);
+    opacity: 0.8;
+  }
+
+  input:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  button {
+    flex: 0 0 auto;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  button:hover {
+    filter: brightness(1.08);
+  }
+
+  .subscribe-thanks {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
