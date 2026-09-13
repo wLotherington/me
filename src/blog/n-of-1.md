@@ -1,5 +1,5 @@
 ---
-title: "N of 1"
+title: "N of 1 Software"
 pubDate: 2026-08-20
 description: "Now that AI makes software basically free to create, I'm building tiny throwaway apps customized to an audience of exactly one: me."
 tags: ["ai", "software", "building"]
